@@ -1,9 +1,14 @@
 {
-  "name": "@cli/vue3-cli-demo",
+  "name": "cli-demo-start-kit",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "demo-cli": "./bin/entry.js"
+  },
   "scripts": {
+    "release": "npm version patch&&npm publish",
+    "test-publish": "npm publish --dry-run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/RenTao0524/vue3-cli/issues"
   },
-  "homepage": "https://github.com/RenTao0524/vue3-cli#readme"
+  "homepage": "https://github.com/RenTao0524/vue3-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "inquirer": "^6.2.1",
+    "ora": "^3.0.0"
+  }
 }
